@@ -132,7 +132,7 @@
     </comp>
     <comp lib="0" loc="(390,120)" name="Tunnel">
       <a name="facing" val="east"/>
-      <a name="label" val="BrData1"/>
+      <a name="label" val="BrData2"/>
       <a name="width" val="32"/>
     </comp>
     <comp lib="0" loc="(390,80)" name="Tunnel">
@@ -198,7 +198,7 @@
       <a name="appearance" val="logisim_evolution"/>
       <a name="contents">addr/data: 8 1
 0 0 0 0 0 0 0 0
-
+0
 </a>
       <a name="dataWidth" val="1"/>
     </comp>
