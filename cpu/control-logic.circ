@@ -212,8 +212,16 @@
     <comp lib="0" loc="(1490,670)" name="Tunnel">
       <a name="label" val="is_xor"/>
     </comp>
+    <comp lib="0" loc="(150,2730)" name="Constant">
+      <a name="value" val="0x37"/>
+      <a name="width" val="7"/>
+    </comp>
     <comp lib="0" loc="(1560,670)" name="Tunnel">
       <a name="label" val="is_srl"/>
+    </comp>
+    <comp lib="0" loc="(160,2670)" name="Constant">
+      <a name="value" val="0x17"/>
+      <a name="width" val="7"/>
     </comp>
     <comp lib="0" loc="(1620,670)" name="Tunnel">
       <a name="label" val="is_sra"/>
@@ -260,6 +268,11 @@
       <a name="facing" val="north"/>
       <a name="label" val="BrEq"/>
     </comp>
+    <comp lib="0" loc="(200,2750)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="Opcode"/>
+      <a name="width" val="7"/>
+    </comp>
     <comp lib="0" loc="(200,970)" name="Splitter">
       <a name="appear" val="center"/>
       <a name="bit0" val="1"/>
@@ -276,6 +289,11 @@
     </comp>
     <comp lib="0" loc="(2000,670)" name="Tunnel">
       <a name="label" val="is_addi"/>
+    </comp>
+    <comp lib="0" loc="(210,2690)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="Opcode"/>
+      <a name="width" val="7"/>
     </comp>
     <comp lib="0" loc="(210,920)" name="Bit Extender">
       <a name="in_width" val="1"/>
@@ -331,6 +349,9 @@
     <comp lib="0" loc="(2500,830)" name="Tunnel">
       <a name="label" val="is_sw"/>
     </comp>
+    <comp lib="0" loc="(2540,1040)" name="Tunnel">
+      <a name="label" val="is_auipc"/>
+    </comp>
     <comp lib="0" loc="(2590,660)" name="Tunnel">
       <a name="label" val="is_beq"/>
     </comp>
@@ -342,6 +363,12 @@
     <comp lib="0" loc="(260,560)" name="Tunnel">
       <a name="label" val="fun7"/>
       <a name="width" val="7"/>
+    </comp>
+    <comp lib="0" loc="(2630,1040)" name="Tunnel">
+      <a name="label" val="is_lui"/>
+    </comp>
+    <comp lib="0" loc="(270,2740)" name="Tunnel">
+      <a name="label" val="is_lui"/>
     </comp>
     <comp lib="0" loc="(2710,670)" name="Tunnel">
       <a name="label" val="is_bne"/>
@@ -357,6 +384,9 @@
     </comp>
     <comp lib="0" loc="(2710,940)" name="Tunnel">
       <a name="label" val="is_bgeu"/>
+    </comp>
+    <comp lib="0" loc="(280,2680)" name="Tunnel">
+      <a name="label" val="is_auipc"/>
     </comp>
     <comp lib="0" loc="(2810,780)" name="Tunnel">
       <a name="label" val="sel"/>
@@ -991,6 +1021,12 @@
     <comp lib="3" loc="(190,1620)" name="Comparator">
       <a name="width" val="7"/>
     </comp>
+    <comp lib="3" loc="(250,2740)" name="Comparator">
+      <a name="width" val="7"/>
+    </comp>
+    <comp lib="3" loc="(260,2680)" name="Comparator">
+      <a name="width" val="7"/>
+    </comp>
     <comp lib="3" loc="(530,1470)" name="Comparator">
       <a name="width" val="10"/>
     </comp>
@@ -1072,7 +1108,8 @@
       <a name="contents">addr/data: 6 16
 1 401 601 81 481 581 101 201
 281 681 301 381 1041 1041 1041 41
-10*0 4*64 74 74
+7*0 842 842 842 4*64 74 74 67
+7e7
 </a>
       <a name="dataWidth" val="16"/>
     </comp>
@@ -1155,7 +1192,9 @@
     <wire from="(140,230)" to="(180,230)"/>
     <wire from="(1430,670)" to="(1430,770)"/>
     <wire from="(1490,670)" to="(1490,780)"/>
+    <wire from="(150,2730)" to="(210,2730)"/>
     <wire from="(1560,670)" to="(1560,790)"/>
+    <wire from="(160,2670)" to="(220,2670)"/>
     <wire from="(160,920)" to="(170,920)"/>
     <wire from="(1620,670)" to="(1620,800)"/>
     <wire from="(1690,670)" to="(1690,810)"/>
@@ -1188,8 +1227,10 @@
     <wire from="(200,210)" to="(200,230)"/>
     <wire from="(200,2210)" to="(200,2230)"/>
     <wire from="(200,2230)" to="(600,2230)"/>
+    <wire from="(200,2750)" to="(210,2750)"/>
     <wire from="(200,970)" to="(210,970)"/>
     <wire from="(2000,670)" to="(2000,860)"/>
+    <wire from="(210,2690)" to="(220,2690)"/>
     <wire from="(210,920)" to="(220,920)"/>
     <wire from="(210,960)" to="(210,970)"/>
     <wire from="(210,960)" to="(220,960)"/>
@@ -1208,12 +1249,19 @@
     <wire from="(250,1620)" to="(270,1620)"/>
     <wire from="(250,210)" to="(250,230)"/>
     <wire from="(250,2300)" to="(260,2300)"/>
+    <wire from="(250,2740)" to="(270,2740)"/>
+    <wire from="(2510,1040)" to="(2510,1060)"/>
+    <wire from="(2510,1060)" to="(2630,1060)"/>
+    <wire from="(2530,1030)" to="(2530,1040)"/>
+    <wire from="(2530,1040)" to="(2540,1040)"/>
     <wire from="(2580,660)" to="(2580,680)"/>
     <wire from="(2580,660)" to="(2590,660)"/>
     <wire from="(2580,680)" to="(2600,680)"/>
     <wire from="(260,1660)" to="(270,1660)"/>
+    <wire from="(260,2680)" to="(280,2680)"/>
     <wire from="(260,560)" to="(260,630)"/>
     <wire from="(2600,680)" to="(2600,970)"/>
+    <wire from="(2630,1040)" to="(2630,1060)"/>
     <wire from="(2660,670)" to="(2660,980)"/>
     <wire from="(2660,670)" to="(2710,670)"/>
     <wire from="(2670,740)" to="(2670,990)"/>
@@ -1415,6 +1463,8 @@
     <wire from="(970,1000)" to="(2680,1000)"/>
     <wire from="(970,1010)" to="(2690,1010)"/>
     <wire from="(970,1020)" to="(2710,1020)"/>
+    <wire from="(970,1030)" to="(2530,1030)"/>
+    <wire from="(970,1040)" to="(2510,1040)"/>
     <wire from="(970,410)" to="(1050,410)"/>
     <wire from="(970,450)" to="(990,450)"/>
     <wire from="(970,710)" to="(980,710)"/>
